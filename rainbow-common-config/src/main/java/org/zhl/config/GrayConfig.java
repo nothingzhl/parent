@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @date 2024/4/3
  **/
 @Component
-@ConfigurationProperties("rainbow.gray")
+@ConfigurationProperties("rainbow.env.gray")
 public class GrayConfig {
     public static final String PREFIX = "rainbow.gray";
 
