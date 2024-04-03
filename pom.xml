@@ -7,37 +7,37 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>parent</name>
-    <description>父工程</description>
+
+
     <modules>
-        <module>rainbow-nacos-discovery-starter</module>
         <module>rainbow-tool</module>
+        <module>rainbow-nacos-discovery-starter</module>
+        <module>rainbow-nacos-config-starter</module>
+
         <module>rainbow-nacos-discovery-starter-test</module>
+        <module>rainbow-feign</module>
+        <module>rainbow-common-config</module>
     </modules>
+
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.7.6</spring-boot.version>
-        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
-        <rainbow.tool.version>0.0.1-SNAPSHOT</rainbow.tool.version>
-        <rainbow.nacos.discovery.version>0.0.1-SNAPSHOT</rainbow.nacos.discovery.version>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
 
-    </dependencies>
+        <spring-boot.version>2.6.13</spring-boot.version>
+        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <guava.version>32.1.3-jre</guava.version>
+        <junit.version>3.8.1</junit.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+
+        <rainbow.tool.version>0.0.1-SNAPSHOT</rainbow.tool.version>
+        <rainbow.nacos.config.version>0.0.1-SNAPSHOT</rainbow.nacos.config.version>
+        <rainbow.nacos.discovery.version>0.0.1-SNAPSHOT</rainbow.nacos.discovery.version>
+        <rainbow.test.version>0.0.1-SNAPSHOT</rainbow.test.version>
+        <rainbow.common.config>0.0.1-SNAPSHOT</rainbow.common.config>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -55,6 +55,13 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.rainbow</groupId>
                 <artifactId>rainbow-tool</artifactId>
                 <version>${rainbow.tool.version}</version>
@@ -64,6 +71,28 @@
                 <artifactId>rainbow-nacos-discovery-starter</artifactId>
                 <version>${rainbow.nacos.discovery.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -79,23 +108,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>${spring-boot.version}</version>-->
-<!--                <configuration>-->
-<!--                    <mainClass>org.zhl.ParentApplication</mainClass>-->
-<!--                    <skip>true</skip>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>repackage</id>-->
-<!--                        <goals>-->
-<!--                            <goal>repackage</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 

@@ -3,9 +3,10 @@ spring:
     nacos:
       discovery:
         server-addr: tc.zhanghanlin.club:8848
-      config:
-        enabled: false
   application:
     name: rainbow-discovery-test
 server:
   port: 8081
+rainbow:
+  gray:
+    enable: true
