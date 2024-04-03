@@ -7,7 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>rainbow-test</artifactId>
+    <artifactId>rainbow-nacos-discovery-starter-test</artifactId>
     <packaging>jar</packaging>
 
     <name>rainbow-test</name>
@@ -21,7 +21,6 @@
         <dependency>
             <groupId>org.rainbow</groupId>
             <artifactId>rainbow-nacos-discovery-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

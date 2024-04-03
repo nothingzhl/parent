@@ -11,7 +11,7 @@
     <modules>
         <module>rainbow-nacos-discovery-starter</module>
         <module>rainbow-tool</module>
-        <module>rainbow-test</module>
+        <module>rainbow-nacos-discovery-starter-test</module>
     </modules>
     <properties>
         <java.version>11</java.version>
@@ -19,17 +19,24 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.7.6</spring-boot.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <rainbow.tool.version>0.0.1-SNAPSHOT</rainbow.tool.version>
+        <rainbow.nacos.discovery.version>0.0.1-SNAPSHOT</rainbow.nacos.discovery.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -46,6 +53,16 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.rainbow</groupId>
+                <artifactId>rainbow-tool</artifactId>
+                <version>${rainbow.tool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.rainbow</groupId>
+                <artifactId>rainbow-nacos-discovery-starter</artifactId>
+                <version>${rainbow.nacos.discovery.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

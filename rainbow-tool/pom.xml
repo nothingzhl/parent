@@ -9,6 +9,7 @@
 
     <artifactId>rainbow-tool</artifactId>
     <packaging>jar</packaging>
+    <version>${rainbow.tool.version}</version>
 
     <name>rainbow-tool</name>
     <url>http://maven.apache.org</url>

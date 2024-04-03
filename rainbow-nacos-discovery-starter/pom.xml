@@ -9,12 +9,17 @@
 
     <artifactId>rainbow-nacos-discovery-starter</artifactId>
     <packaging>jar</packaging>
+    <version>${rainbow.nacos.discovery.version}</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.rainbow</groupId>
+            <artifactId>rainbow-tool</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
